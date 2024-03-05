@@ -9,10 +9,10 @@ c = 'a';
 last_char = 'z';
 
 while (c <= last_char)
-    {
+{
 putchar(c);
 c++;
-    }
+}
 
 putchar('\n');
 
