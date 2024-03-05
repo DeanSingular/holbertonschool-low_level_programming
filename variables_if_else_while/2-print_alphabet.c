@@ -2,19 +2,19 @@
 
 int main(void)
 {
-    char c;
-    char last_char;
+char c;
+char last_char;
 
-    c = 'a';
-    last_char = 'z';
+c = 'a';
+last_char = 'z';
 
-    while (c <= last_char)
+while (c <= last_char)
     {
-        putchar(c);
-        c++;
+putchar(c);
+c++;
     }
 
-    putchar('\n');
+putchar('\n');
 
-    return (0);
+return (0);
 }
