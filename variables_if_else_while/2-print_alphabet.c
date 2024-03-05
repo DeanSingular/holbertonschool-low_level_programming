@@ -1,18 +1,20 @@
-i#include <stdio.h>
+#include <stdio.h>
 
-/**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
 int main(void)
 {
-char c;
+    char c;
+    char last_char;
 
-for (c = 'a'; c <= 'z'; c++)
-putchar(c);
+    c = 'a';
+    last_char = 'z';
 
-putchar('\n');
+    while (c <= last_char)
+    {
+        putchar(c);
+        c++;
+    }
 
-return (0);
+    putchar('\n');
+
+    return (0);
 }
