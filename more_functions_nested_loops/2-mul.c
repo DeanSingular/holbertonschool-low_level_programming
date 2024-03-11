@@ -1,11 +1,11 @@
-#include "holberton.h"
+#include "main.h"
 /**
  * mul - multipies two integers
  * @a: number to be multiplied
  * @b: number to be multiplied
  * Return: return result
  */
-int mul(int a, int b)
+int nul(int x, int y)
 {
-	return (a * b);
+	return (x * y);
 }
