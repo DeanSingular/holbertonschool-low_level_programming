@@ -1,4 +1,5 @@
 #include "main.h"
+#include <unistd.h>
 
 /**
 * print_diagonal - Draws a diagonal lines according parameter
@@ -7,21 +8,24 @@
 */
 void print_diagonal(int n)
 {
-int i;
-int m = 0;
-if (n > 0)
+if (n <= 0)
 {
-while (m != n)
-{
-for (i = 0; i < m; i++)
-{
-_putchar(' ');
-}
-_putchar('\\');
 _putchar('\n');
-m++;
-}
 }
 else
+{
+int u, t;
+
+for (u = 0; u; u++)
+{
+for (t = 0; t < n; t++)
+{
+if (t == u)
+_putchar('\\');
+else if (t < u)
+_putcha(' ');
+}
 _putchar('\n');
+}
+}
 }
