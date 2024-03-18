@@ -1,4 +1,8 @@
 #include "main.h"
+#include <stdio.h>
+
+int _sqrt(int n, int i);
+
 /**
  * _sqrt_recursion - returns the natural square root of a number
  * @n: the number need to find square root
@@ -6,21 +10,22 @@
  */
 int _sqrt_recursion(int n)
 {
-	return (_help(1, n));
+	return (_sqrt(n, 1));
 }
 /**
- * _help - a helper function to find sqrt root)
+ * _sqrt - Calculates natural square root
  * @n: the number need to find square root
- * @g: the square root number that guess.
+ * @i: iterate number
  * Return: return the correct square root number
- * return -1 if n does not have a natural square root
  */
-int _help(int g, int n)
+int _sqrt(int n, int i)
 {
-	if ((g * g) == n)
-		return (g);
-	if ((g * g) < n)
-		return (_help(g + 1, n));
-	else
+	int sqrt = i * i;
+
+	if (sqrt > n)
 		return (-1);
+	if (sqrt == n)
+		return (i);
+
+	return (_sqrt(n, i + 1));
 }
