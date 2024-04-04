@@ -49,6 +49,4 @@ void print_all(const char * const format, ...)
 		i++;
 	}
 	/* clean memory reserved for list */
-	va_end(list);
-	printf("\n");
 }
