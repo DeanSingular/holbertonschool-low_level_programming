@@ -43,10 +43,10 @@ void print_all(const char * const format, ...)
 			continue;
 		}
 		/* print ', ' follow by each argument */
-		/* except the last one */
 		if (format[i + 1] != '\0')
 			printf(", ");
 		i++;
 	}
-	/* clean memory reserved for list */
+	va_end(list);
+	printf("\n");
 }
