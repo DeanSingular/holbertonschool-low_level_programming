@@ -1,19 +1,21 @@
+#include "main.h"
+
 /**
- * get_bit - gets the value of a bit at index,
- * starting from least bit at 0
+ * get_bit - prog returns the value of a bit at a given index.
+ * @n: number to check bits in
+ * @index: index at which to check bit
  *
- * @n: number to get bit from
- * @index: index of bit
- *
- * Return: value of bit, or -1 if error
+ * Return: value of the bit, or -1 if there is an error
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned long int m;
+	unsigned long int divisor, check;
 
-	if (index > 63)
+	if (index > (sizeof(unsigned long int) * 8 - 1))
 		return (-1);
-
-	m = 1 << index;
-	return ((n & m) > 0);
+	divisor = 1 << index;
+	check = n & divisor;
+	if (check == divisor)
+		return (1);
+	return (0);
 }

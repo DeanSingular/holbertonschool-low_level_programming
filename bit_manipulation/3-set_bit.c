@@ -1,17 +1,19 @@
+#include "main.h"
+
 /**
- * set_bit - sets the value of a bit at index,
- * starting from least bit at 0
+ * set_bit - prog sets the value of a bit to 1 at a given index.
+ * @n: number to set
+ * @index: index at which to set bit
  *
- * @n: number to get bit from
- * @index: index of bit
- *
- * Return: value of bit, or -1 if error
+ * Return: 1 if success, or -1 if an error occurred
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	if (index > 63)
-		return (-1);
+	unsigned long int setbit;
 
-	*n = *n | 1ul << index;
+	if (index > (sizeof(unsigned long int) * 8 - 1))
+		return (-1);
+	setbit = 1 << index;
+	*n = *n | setbit;
 	return (1);
 }
